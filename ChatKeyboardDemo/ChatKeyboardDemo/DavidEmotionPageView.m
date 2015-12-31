@@ -85,6 +85,13 @@
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.30 * NSEC_PER_SEC)), dispatch_get_main_queue(),^{
         [self.detailView removeFromSuperview];
     });
+    
+    //发出通知
+    NSMutableDictionary *userInfo = [[NSMutableDictionary alloc] init];
+    userInfo[@"selectedEmotion"] = button.titleLabel.text;
+    NSNotification *notification =  [[NSNotification alloc] initWithName:@"DavidEmotionPageViewDidSelectNotification" object:nil userInfo:userInfo];
+    [[NSNotificationCenter defaultCenter] postNotification:notification];
+    
 }
 
 /** 随机色 */

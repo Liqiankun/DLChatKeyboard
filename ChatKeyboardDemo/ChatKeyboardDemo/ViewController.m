@@ -60,7 +60,7 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyBoardFrameDidChange:) name:UIKeyboardWillChangeFrameNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyBoardWillShow:) name:UIKeyboardWillShowNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyBoardWillHide:) name:UIKeyboardWillHideNotification object:nil];
-    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(emotionPageDidSelect:) name:@"DavidEmotionPageViewDidSelectNotification" object:nil];
 
 }
 
@@ -115,7 +115,12 @@
     }
     
 
-    
+}
+
+-(void)emotionPageDidSelect:(NSNotification*)notification
+{
+    NSString *str = notification.userInfo[@"selectedEmotion"];
+    self.textBar.textView.text = [NSString stringWithFormat:@"%@%@",self.textBar.textView.text,str];
 }
 
 - (void)messageViewAnimationWithMessageRect:(CGRect)rect  withMessageInputViewRect:(CGRect)inputViewRect andDuration:(double)duration andState:(InputViewStateType)state{
