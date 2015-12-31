@@ -1,0 +1,576 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6312AC911C34CB46004ED7D0 /* emotion.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6312AC901C34CB46004ED7D0 /* emotion.plist */; };
+		6312AC941C34D86A004ED7D0 /* DavidEmotionPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6312AC931C34D86A004ED7D0 /* DavidEmotionPageView.m */; };
+		6312AC971C34DF89004ED7D0 /* NSString+Emoji.m in Sources */ = {isa = PBXBuildFile; fileRef = 6312AC961C34DF89004ED7D0 /* NSString+Emoji.m */; };
+		6344EDAA1C33E93A006BD651 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6344EDA91C33E93A006BD651 /* main.m */; };
+		6344EDAD1C33E93B006BD651 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6344EDAC1C33E93B006BD651 /* AppDelegate.m */; };
+		6344EDB81C33E93B006BD651 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6344EDB61C33E93B006BD651 /* LaunchScreen.storyboard */; };
+		6344EDC31C33E93B006BD651 /* ChatKeyboardDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6344EDC21C33E93B006BD651 /* ChatKeyboardDemoTests.m */; };
+		6344EDCE1C33E93B006BD651 /* ChatKeyboardDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6344EDCD1C33E93B006BD651 /* ChatKeyboardDemoUITests.m */; };
+		6344EDE21C33E98A006BD651 /* DavidEmotionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6344EDDD1C33E98A006BD651 /* DavidEmotionView.m */; };
+		6344EDE31C33E98A006BD651 /* DavidMediaView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6344EDDF1C33E98A006BD651 /* DavidMediaView.m */; };
+		6344EDE41C33E98A006BD651 /* DavidTextBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 6344EDE11C33E98A006BD651 /* DavidTextBar.m */; };
+		6344EDEB1C33E9A6006BD651 /* NSString+SIZEOFSTRING.m in Sources */ = {isa = PBXBuildFile; fileRef = 6344EDE61C33E9A6006BD651 /* NSString+SIZEOFSTRING.m */; };
+		6344EDEC1C33E9A6006BD651 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 6344EDE81C33E9A6006BD651 /* README.md */; };
+		6344EDED1C33E9A6006BD651 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6344EDEA1C33E9A6006BD651 /* UIView+Extension.m */; };
+		6344EDEF1C33E9D5006BD651 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6344EDEE1C33E9D5006BD651 /* ViewController.m */; };
+		6344EDF21C33EA6B006BD651 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6344EDF11C33EA6B006BD651 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6344EDBF1C33E93B006BD651 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6344ED9D1C33E93A006BD651 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6344EDA41C33E93A006BD651;
+			remoteInfo = ChatKeyboardDemo;
+		};
+		6344EDCA1C33E93B006BD651 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6344ED9D1C33E93A006BD651 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6344EDA41C33E93A006BD651;
+			remoteInfo = ChatKeyboardDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6312AC901C34CB46004ED7D0 /* emotion.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = emotion.plist; sourceTree = "<group>"; };
+		6312AC921C34D86A004ED7D0 /* DavidEmotionPageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DavidEmotionPageView.h; sourceTree = "<group>"; };
+		6312AC931C34D86A004ED7D0 /* DavidEmotionPageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DavidEmotionPageView.m; sourceTree = "<group>"; };
+		6312AC951C34DF89004ED7D0 /* NSString+Emoji.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Emoji.h"; sourceTree = "<group>"; };
+		6312AC961C34DF89004ED7D0 /* NSString+Emoji.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Emoji.m"; sourceTree = "<group>"; };
+		6344EDA51C33E93A006BD651 /* ChatKeyboardDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatKeyboardDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6344EDA91C33E93A006BD651 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6344EDAB1C33E93B006BD651 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		6344EDAC1C33E93B006BD651 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		6344EDB71C33E93B006BD651 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6344EDB91C33E93B006BD651 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6344EDBE1C33E93B006BD651 /* ChatKeyboardDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChatKeyboardDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6344EDC21C33E93B006BD651 /* ChatKeyboardDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatKeyboardDemoTests.m; sourceTree = "<group>"; };
+		6344EDC41C33E93B006BD651 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6344EDC91C33E93B006BD651 /* ChatKeyboardDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChatKeyboardDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6344EDCD1C33E93B006BD651 /* ChatKeyboardDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatKeyboardDemoUITests.m; sourceTree = "<group>"; };
+		6344EDCF1C33E93B006BD651 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6344EDDC1C33E98A006BD651 /* DavidEmotionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DavidEmotionView.h; sourceTree = "<group>"; };
+		6344EDDD1C33E98A006BD651 /* DavidEmotionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DavidEmotionView.m; sourceTree = "<group>"; };
+		6344EDDE1C33E98A006BD651 /* DavidMediaView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DavidMediaView.h; sourceTree = "<group>"; };
+		6344EDDF1C33E98A006BD651 /* DavidMediaView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DavidMediaView.m; sourceTree = "<group>"; };
+		6344EDE01C33E98A006BD651 /* DavidTextBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DavidTextBar.h; sourceTree = "<group>"; };
+		6344EDE11C33E98A006BD651 /* DavidTextBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DavidTextBar.m; sourceTree = "<group>"; };
+		6344EDE51C33E9A6006BD651 /* NSString+SIZEOFSTRING.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SIZEOFSTRING.h"; sourceTree = "<group>"; };
+		6344EDE61C33E9A6006BD651 /* NSString+SIZEOFSTRING.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SIZEOFSTRING.m"; sourceTree = "<group>"; };
+		6344EDE81C33E9A6006BD651 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		6344EDE91C33E9A6006BD651 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		6344EDEA1C33E9A6006BD651 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		6344EDEE1C33E9D5006BD651 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		6344EDF01C33EA34006BD651 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		6344EDF11C33EA6B006BD651 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6344EDA21C33E93A006BD651 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6344EDBB1C33E93B006BD651 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6344EDC61C33E93B006BD651 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6344ED9C1C33E93A006BD651 = {
+			isa = PBXGroup;
+			children = (
+				6344EDA71C33E93A006BD651 /* ChatKeyboardDemo */,
+				6344EDC11C33E93B006BD651 /* ChatKeyboardDemoTests */,
+				6344EDCC1C33E93B006BD651 /* ChatKeyboardDemoUITests */,
+				6344EDA61C33E93A006BD651 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6344EDA61C33E93A006BD651 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6344EDA51C33E93A006BD651 /* ChatKeyboardDemo.app */,
+				6344EDBE1C33E93B006BD651 /* ChatKeyboardDemoTests.xctest */,
+				6344EDC91C33E93B006BD651 /* ChatKeyboardDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6344EDA71C33E93A006BD651 /* ChatKeyboardDemo */ = {
+			isa = PBXGroup;
+			children = (
+				6344EDDB1C33E966006BD651 /* DavidTextBar */,
+				6344EDAB1C33E93B006BD651 /* AppDelegate.h */,
+				6344EDAC1C33E93B006BD651 /* AppDelegate.m */,
+				6344EDF01C33EA34006BD651 /* ViewController.h */,
+				6344EDEE1C33E9D5006BD651 /* ViewController.m */,
+				6344EDA81C33E93A006BD651 /* Supporting Files */,
+			);
+			path = ChatKeyboardDemo;
+			sourceTree = "<group>";
+		};
+		6344EDA81C33E93A006BD651 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6312AC951C34DF89004ED7D0 /* NSString+Emoji.h */,
+				6312AC961C34DF89004ED7D0 /* NSString+Emoji.m */,
+				6344EDF11C33EA6B006BD651 /* Assets.xcassets */,
+				6344EDB61C33E93B006BD651 /* LaunchScreen.storyboard */,
+				6344EDB91C33E93B006BD651 /* Info.plist */,
+				6312AC901C34CB46004ED7D0 /* emotion.plist */,
+				6344EDE51C33E9A6006BD651 /* NSString+SIZEOFSTRING.h */,
+				6344EDE61C33E9A6006BD651 /* NSString+SIZEOFSTRING.m */,
+				6344EDE71C33E9A6006BD651 /* UIView-Extension */,
+				6344EDA91C33E93A006BD651 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6344EDC11C33E93B006BD651 /* ChatKeyboardDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				6344EDC21C33E93B006BD651 /* ChatKeyboardDemoTests.m */,
+				6344EDC41C33E93B006BD651 /* Info.plist */,
+			);
+			path = ChatKeyboardDemoTests;
+			sourceTree = "<group>";
+		};
+		6344EDCC1C33E93B006BD651 /* ChatKeyboardDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				6344EDCD1C33E93B006BD651 /* ChatKeyboardDemoUITests.m */,
+				6344EDCF1C33E93B006BD651 /* Info.plist */,
+			);
+			path = ChatKeyboardDemoUITests;
+			sourceTree = "<group>";
+		};
+		6344EDDB1C33E966006BD651 /* DavidTextBar */ = {
+			isa = PBXGroup;
+			children = (
+				6344EDDC1C33E98A006BD651 /* DavidEmotionView.h */,
+				6344EDDD1C33E98A006BD651 /* DavidEmotionView.m */,
+				6344EDDE1C33E98A006BD651 /* DavidMediaView.h */,
+				6344EDDF1C33E98A006BD651 /* DavidMediaView.m */,
+				6344EDE01C33E98A006BD651 /* DavidTextBar.h */,
+				6344EDE11C33E98A006BD651 /* DavidTextBar.m */,
+				6312AC921C34D86A004ED7D0 /* DavidEmotionPageView.h */,
+				6312AC931C34D86A004ED7D0 /* DavidEmotionPageView.m */,
+			);
+			name = DavidTextBar;
+			sourceTree = "<group>";
+		};
+		6344EDE71C33E9A6006BD651 /* UIView-Extension */ = {
+			isa = PBXGroup;
+			children = (
+				6344EDE81C33E9A6006BD651 /* README.md */,
+				6344EDE91C33E9A6006BD651 /* UIView+Extension.h */,
+				6344EDEA1C33E9A6006BD651 /* UIView+Extension.m */,
+			);
+			path = "UIView-Extension";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6344EDA41C33E93A006BD651 /* ChatKeyboardDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6344EDD21C33E93B006BD651 /* Build configuration list for PBXNativeTarget "ChatKeyboardDemo" */;
+			buildPhases = (
+				6344EDA11C33E93A006BD651 /* Sources */,
+				6344EDA21C33E93A006BD651 /* Frameworks */,
+				6344EDA31C33E93A006BD651 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ChatKeyboardDemo;
+			productName = ChatKeyboardDemo;
+			productReference = 6344EDA51C33E93A006BD651 /* ChatKeyboardDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6344EDBD1C33E93B006BD651 /* ChatKeyboardDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6344EDD51C33E93B006BD651 /* Build configuration list for PBXNativeTarget "ChatKeyboardDemoTests" */;
+			buildPhases = (
+				6344EDBA1C33E93B006BD651 /* Sources */,
+				6344EDBB1C33E93B006BD651 /* Frameworks */,
+				6344EDBC1C33E93B006BD651 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6344EDC01C33E93B006BD651 /* PBXTargetDependency */,
+			);
+			name = ChatKeyboardDemoTests;
+			productName = ChatKeyboardDemoTests;
+			productReference = 6344EDBE1C33E93B006BD651 /* ChatKeyboardDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		6344EDC81C33E93B006BD651 /* ChatKeyboardDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6344EDD81C33E93B006BD651 /* Build configuration list for PBXNativeTarget "ChatKeyboardDemoUITests" */;
+			buildPhases = (
+				6344EDC51C33E93B006BD651 /* Sources */,
+				6344EDC61C33E93B006BD651 /* Frameworks */,
+				6344EDC71C33E93B006BD651 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6344EDCB1C33E93B006BD651 /* PBXTargetDependency */,
+			);
+			name = ChatKeyboardDemoUITests;
+			productName = ChatKeyboardDemoUITests;
+			productReference = 6344EDC91C33E93B006BD651 /* ChatKeyboardDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6344ED9D1C33E93A006BD651 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = DavidLee;
+				TargetAttributes = {
+					6344EDA41C33E93A006BD651 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					6344EDBD1C33E93B006BD651 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 6344EDA41C33E93A006BD651;
+					};
+					6344EDC81C33E93B006BD651 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 6344EDA41C33E93A006BD651;
+					};
+				};
+			};
+			buildConfigurationList = 6344EDA01C33E93A006BD651 /* Build configuration list for PBXProject "ChatKeyboardDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6344ED9C1C33E93A006BD651;
+			productRefGroup = 6344EDA61C33E93A006BD651 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6344EDA41C33E93A006BD651 /* ChatKeyboardDemo */,
+				6344EDBD1C33E93B006BD651 /* ChatKeyboardDemoTests */,
+				6344EDC81C33E93B006BD651 /* ChatKeyboardDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6344EDA31C33E93A006BD651 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6312AC911C34CB46004ED7D0 /* emotion.plist in Resources */,
+				6344EDF21C33EA6B006BD651 /* Assets.xcassets in Resources */,
+				6344EDB81C33E93B006BD651 /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6344EDBC1C33E93B006BD651 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6344EDC71C33E93B006BD651 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6344EDA11C33E93A006BD651 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6344EDEF1C33E9D5006BD651 /* ViewController.m in Sources */,
+				6344EDED1C33E9A6006BD651 /* UIView+Extension.m in Sources */,
+				6312AC941C34D86A004ED7D0 /* DavidEmotionPageView.m in Sources */,
+				6312AC971C34DF89004ED7D0 /* NSString+Emoji.m in Sources */,
+				6344EDE41C33E98A006BD651 /* DavidTextBar.m in Sources */,
+				6344EDE31C33E98A006BD651 /* DavidMediaView.m in Sources */,
+				6344EDAD1C33E93B006BD651 /* AppDelegate.m in Sources */,
+				6344EDAA1C33E93A006BD651 /* main.m in Sources */,
+				6344EDE21C33E98A006BD651 /* DavidEmotionView.m in Sources */,
+				6344EDEC1C33E9A6006BD651 /* README.md in Sources */,
+				6344EDEB1C33E9A6006BD651 /* NSString+SIZEOFSTRING.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6344EDBA1C33E93B006BD651 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6344EDC31C33E93B006BD651 /* ChatKeyboardDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6344EDC51C33E93B006BD651 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6344EDCE1C33E93B006BD651 /* ChatKeyboardDemoUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6344EDC01C33E93B006BD651 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6344EDA41C33E93A006BD651 /* ChatKeyboardDemo */;
+			targetProxy = 6344EDBF1C33E93B006BD651 /* PBXContainerItemProxy */;
+		};
+		6344EDCB1C33E93B006BD651 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6344EDA41C33E93A006BD651 /* ChatKeyboardDemo */;
+			targetProxy = 6344EDCA1C33E93B006BD651 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6344EDB61C33E93B006BD651 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6344EDB71C33E93B006BD651 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6344EDD01C33E93B006BD651 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		6344EDD11C33E93B006BD651 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6344EDD31C33E93B006BD651 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ChatKeyboardDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = david.com.cn.ChatKeyboardDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		6344EDD41C33E93B006BD651 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ChatKeyboardDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = david.com.cn.ChatKeyboardDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		6344EDD61C33E93B006BD651 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ChatKeyboardDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = david.com.cn.ChatKeyboardDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChatKeyboardDemo.app/ChatKeyboardDemo";
+			};
+			name = Debug;
+		};
+		6344EDD71C33E93B006BD651 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ChatKeyboardDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = david.com.cn.ChatKeyboardDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChatKeyboardDemo.app/ChatKeyboardDemo";
+			};
+			name = Release;
+		};
+		6344EDD91C33E93B006BD651 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ChatKeyboardDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = david.com.cn.ChatKeyboardDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ChatKeyboardDemo;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		6344EDDA1C33E93B006BD651 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ChatKeyboardDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = david.com.cn.ChatKeyboardDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ChatKeyboardDemo;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6344EDA01C33E93A006BD651 /* Build configuration list for PBXProject "ChatKeyboardDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6344EDD01C33E93B006BD651 /* Debug */,
+				6344EDD11C33E93B006BD651 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6344EDD21C33E93B006BD651 /* Build configuration list for PBXNativeTarget "ChatKeyboardDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6344EDD31C33E93B006BD651 /* Debug */,
+				6344EDD41C33E93B006BD651 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6344EDD51C33E93B006BD651 /* Build configuration list for PBXNativeTarget "ChatKeyboardDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6344EDD61C33E93B006BD651 /* Debug */,
+				6344EDD71C33E93B006BD651 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6344EDD81C33E93B006BD651 /* Build configuration list for PBXNativeTarget "ChatKeyboardDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6344EDD91C33E93B006BD651 /* Debug */,
+				6344EDDA1C33E93B006BD651 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6344ED9D1C33E93A006BD651 /* Project object */;
+}
