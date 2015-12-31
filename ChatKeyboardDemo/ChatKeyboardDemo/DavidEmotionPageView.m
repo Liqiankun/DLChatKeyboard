@@ -9,8 +9,23 @@
 #import "DavidEmotionPageView.h"
 #import "UIView+Extension.h"
 #import "NSString+Emoji.h"
+#import "DavidEmotionDetailView.h"
+
+@interface DavidEmotionPageView ()
+
+@property(nonatomic,strong)DavidEmotionDetailView *detailView;
+
+@end
+
 @implementation DavidEmotionPageView
 
+-(DavidEmotionDetailView*)detailView
+{
+    if (!_detailView) {
+        self.detailView = [DavidEmotionDetailView detailView];
+    }
+    return _detailView;
+}
 
 -(void)setEmotionArray:(NSArray *)emotionArray
 {
@@ -19,14 +34,16 @@
     for (int i = 0 ; i < count; i++)
     {
         UIButton *button = [[UIButton alloc] init];
-        //button.backgroundColor = [DavidEmotionPageView randomColor];
+        button.backgroundColor = [DavidEmotionPageView randomColor];
         NSDictionary *emotionDic = emotionArray[i];
         NSString *emotionCode = emotionDic[@"code"];
         
         //emotion.code : 十六进制->表情
         [button setTitle:[NSString emojiWithStringCode:emotionCode] forState:UIControlStateNormal];
         button.titleLabel.font = [UIFont systemFontOfSize:32];
+        [button addTarget:self action:@selector(emotionButtonAction:)forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:button];
+        
     }
 }
 
@@ -34,6 +51,7 @@
 -(void)layoutSubviews
 {
     [super layoutSubviews];
+    
     NSUInteger count = self.emotionArray.count;
     
     CGFloat inset = 10;//内边距
@@ -49,6 +67,24 @@
         button.y = inset + (i/7) * btnHeight;
         
     }
+}
+
+/** 按钮点击事件 */
+-(void)emotionButtonAction:(UIButton*)button
+{
+   UIWindow *window = [[UIApplication sharedApplication].windows lastObject];
+    [window addSubview:self.detailView];
+    
+    //计算被点击的按钮在window中的frame
+    CGRect buttonFrame =  [button convertRect:button.bounds toView:window];
+    [self.detailView.detailButton setTitle:button.titleLabel.text forState:UIControlStateNormal];
+    self.detailView.y = CGRectGetMidY(buttonFrame) - self.detailView.height;
+    self.detailView.centerX = button.centerX;
+    
+    //延时之后移除detailView
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.30 * NSEC_PER_SEC)), dispatch_get_main_queue(),^{
+        [self.detailView removeFromSuperview];
+    });
 }
 
 /** 随机色 */

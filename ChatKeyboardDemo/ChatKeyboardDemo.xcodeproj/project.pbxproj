@@ -10,6 +10,8 @@
 		6312AC911C34CB46004ED7D0 /* emotion.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6312AC901C34CB46004ED7D0 /* emotion.plist */; };
 		6312AC941C34D86A004ED7D0 /* DavidEmotionPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6312AC931C34D86A004ED7D0 /* DavidEmotionPageView.m */; };
 		6312AC971C34DF89004ED7D0 /* NSString+Emoji.m in Sources */ = {isa = PBXBuildFile; fileRef = 6312AC961C34DF89004ED7D0 /* NSString+Emoji.m */; };
+		6312ACA21C350223004ED7D0 /* DavidEmotionDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6312ACA11C350223004ED7D0 /* DavidEmotionDetailView.m */; };
+		6312ACA41C350256004ED7D0 /* DavidEmotionDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6312ACA31C350256004ED7D0 /* DavidEmotionDetailView.xib */; };
 		6344EDAA1C33E93A006BD651 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6344EDA91C33E93A006BD651 /* main.m */; };
 		6344EDAD1C33E93B006BD651 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6344EDAC1C33E93B006BD651 /* AppDelegate.m */; };
 		6344EDB81C33E93B006BD651 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6344EDB61C33E93B006BD651 /* LaunchScreen.storyboard */; };
@@ -48,6 +50,9 @@
 		6312AC931C34D86A004ED7D0 /* DavidEmotionPageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DavidEmotionPageView.m; sourceTree = "<group>"; };
 		6312AC951C34DF89004ED7D0 /* NSString+Emoji.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Emoji.h"; sourceTree = "<group>"; };
 		6312AC961C34DF89004ED7D0 /* NSString+Emoji.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Emoji.m"; sourceTree = "<group>"; };
+		6312ACA01C350223004ED7D0 /* DavidEmotionDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DavidEmotionDetailView.h; sourceTree = "<group>"; };
+		6312ACA11C350223004ED7D0 /* DavidEmotionDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DavidEmotionDetailView.m; sourceTree = "<group>"; };
+		6312ACA31C350256004ED7D0 /* DavidEmotionDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DavidEmotionDetailView.xib; sourceTree = "<group>"; };
 		6344EDA51C33E93A006BD651 /* ChatKeyboardDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatKeyboardDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6344EDA91C33E93A006BD651 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6344EDAB1C33E93B006BD651 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -101,6 +106,63 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6312AC9A1C34EB59004ED7D0 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				6344EDE71C33E9A6006BD651 /* UIView-Extension */,
+				6312AC951C34DF89004ED7D0 /* NSString+Emoji.h */,
+				6312AC961C34DF89004ED7D0 /* NSString+Emoji.m */,
+				6344EDE51C33E9A6006BD651 /* NSString+SIZEOFSTRING.h */,
+				6344EDE61C33E9A6006BD651 /* NSString+SIZEOFSTRING.m */,
+			);
+			name = Category;
+			sourceTree = "<group>";
+		};
+		6312AC9B1C34EB81004ED7D0 /* Plist */ = {
+			isa = PBXGroup;
+			children = (
+				6344EDB91C33E93B006BD651 /* Info.plist */,
+				6312AC901C34CB46004ED7D0 /* emotion.plist */,
+				6344EDA91C33E93A006BD651 /* main.m */,
+			);
+			name = Plist;
+			sourceTree = "<group>";
+		};
+		6312AC9C1C34EBA6004ED7D0 /* Assests */ = {
+			isa = PBXGroup;
+			children = (
+				6344EDF11C33EA6B006BD651 /* Assets.xcassets */,
+				6344EDB61C33E93B006BD651 /* LaunchScreen.storyboard */,
+			);
+			name = Assests;
+			sourceTree = "<group>";
+		};
+		6312AC9D1C34FFF6004ED7D0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6344EDDB1C33E966006BD651 /* DavidTextBar */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		6312AC9E1C34FFFE004ED7D0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		6312AC9F1C350006004ED7D0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6344EDAB1C33E93B006BD651 /* AppDelegate.h */,
+				6344EDAC1C33E93B006BD651 /* AppDelegate.m */,
+				6344EDF01C33EA34006BD651 /* ViewController.h */,
+				6344EDEE1C33E9D5006BD651 /* ViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 		6344ED9C1C33E93A006BD651 = {
 			isa = PBXGroup;
 			children = (
@@ -124,11 +186,9 @@
 		6344EDA71C33E93A006BD651 /* ChatKeyboardDemo */ = {
 			isa = PBXGroup;
 			children = (
-				6344EDDB1C33E966006BD651 /* DavidTextBar */,
-				6344EDAB1C33E93B006BD651 /* AppDelegate.h */,
-				6344EDAC1C33E93B006BD651 /* AppDelegate.m */,
-				6344EDF01C33EA34006BD651 /* ViewController.h */,
-				6344EDEE1C33E9D5006BD651 /* ViewController.m */,
+				6312AC9F1C350006004ED7D0 /* Controller */,
+				6312AC9E1C34FFFE004ED7D0 /* Model */,
+				6312AC9D1C34FFF6004ED7D0 /* View */,
 				6344EDA81C33E93A006BD651 /* Supporting Files */,
 			);
 			path = ChatKeyboardDemo;
@@ -137,16 +197,9 @@
 		6344EDA81C33E93A006BD651 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				6312AC951C34DF89004ED7D0 /* NSString+Emoji.h */,
-				6312AC961C34DF89004ED7D0 /* NSString+Emoji.m */,
-				6344EDF11C33EA6B006BD651 /* Assets.xcassets */,
-				6344EDB61C33E93B006BD651 /* LaunchScreen.storyboard */,
-				6344EDB91C33E93B006BD651 /* Info.plist */,
-				6312AC901C34CB46004ED7D0 /* emotion.plist */,
-				6344EDE51C33E9A6006BD651 /* NSString+SIZEOFSTRING.h */,
-				6344EDE61C33E9A6006BD651 /* NSString+SIZEOFSTRING.m */,
-				6344EDE71C33E9A6006BD651 /* UIView-Extension */,
-				6344EDA91C33E93A006BD651 /* main.m */,
+				6312AC9C1C34EBA6004ED7D0 /* Assests */,
+				6312AC9B1C34EB81004ED7D0 /* Plist */,
+				6312AC9A1C34EB59004ED7D0 /* Category */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -180,6 +233,9 @@
 				6344EDE11C33E98A006BD651 /* DavidTextBar.m */,
 				6312AC921C34D86A004ED7D0 /* DavidEmotionPageView.h */,
 				6312AC931C34D86A004ED7D0 /* DavidEmotionPageView.m */,
+				6312ACA01C350223004ED7D0 /* DavidEmotionDetailView.h */,
+				6312ACA11C350223004ED7D0 /* DavidEmotionDetailView.m */,
+				6312ACA31C350256004ED7D0 /* DavidEmotionDetailView.xib */,
 			);
 			name = DavidTextBar;
 			sourceTree = "<group>";
@@ -297,6 +353,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6312ACA41C350256004ED7D0 /* DavidEmotionDetailView.xib in Resources */,
 				6312AC911C34CB46004ED7D0 /* emotion.plist in Resources */,
 				6344EDF21C33EA6B006BD651 /* Assets.xcassets in Resources */,
 				6344EDB81C33E93B006BD651 /* LaunchScreen.storyboard in Resources */,
@@ -332,6 +389,7 @@
 				6344EDE31C33E98A006BD651 /* DavidMediaView.m in Sources */,
 				6344EDAD1C33E93B006BD651 /* AppDelegate.m in Sources */,
 				6344EDAA1C33E93A006BD651 /* main.m in Sources */,
+				6312ACA21C350223004ED7D0 /* DavidEmotionDetailView.m in Sources */,
 				6344EDE21C33E98A006BD651 /* DavidEmotionView.m in Sources */,
 				6344EDEC1C33E9A6006BD651 /* README.md in Sources */,
 				6344EDEB1C33E9A6006BD651 /* NSString+SIZEOFSTRING.m in Sources */,
