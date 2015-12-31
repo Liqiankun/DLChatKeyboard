@@ -37,7 +37,7 @@
         self.layer.borderColor = [[UIColor colorWithRed:0.83f green:0.83f blue:0.83f alpha:1.00f] CGColor];
         
         self.textView = [[UITextView alloc] init];
-        //self.textView.font = [UIFont systemFontOfSize:13];
+        self.textView.font = [UIFont systemFontOfSize:15];
         self.textView.textColor = [UIColor blackColor];
         self.textView.layer.cornerRadius = 5;
         self.textView.layer.borderWidth = 0.5;
@@ -45,7 +45,7 @@
         self.textView.returnKeyType = UIReturnKeySend;
         self.textView.scrollEnabled = YES;
         self.textView.delegate = self;
-        self.textView.font = [UIFont systemFontOfSize:13];
+      
         //设置没有文字时return键不能点击
         self.textView.enablesReturnKeyAutomatically = YES;
         [self addSubview:self.textView];
@@ -101,7 +101,7 @@
 -(void)setButtonsSelected:(BOOL)selected
 {
     self.addButton.selected = selected;
-    self.emotionButton.selected = selected;
+    self.emotionButton.selected = selected; 
 }
 
 #pragma mark -- UItextViewDelegate
