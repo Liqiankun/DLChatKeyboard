@@ -11,7 +11,7 @@
 #import "DavidMediaView.h"
 #import "DavidEmotionView.h"
 #import "UIView+Extension.h"
-@interface ViewController ()<DavidTextBarDelegate,DavidMediaViewDelegate>
+@interface ViewController ()<DavidTextBarDelegate,DavidMediaViewDelegate,UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 
 @property(nonatomic,strong)DavidTextBar *textBar;
 @property(nonatomic,strong) DavidMediaView *mediaView;
@@ -19,6 +19,7 @@
 @property(nonatomic,assign) BOOL isSwitchingKeyboard;
 @property(nonatomic,assign) CGRect keyBoardRect;
 @property(nonatomic,assign) double duration;
+@property(nonatomic,strong) UIImageView *pickedImageView;
 @end
 
 @implementation ViewController
@@ -52,8 +53,14 @@
     self.automaticallyAdjustsScrollViewInsets = NO;
     self.textBar = [[DavidTextBar alloc] initWithFrame:CGRectMake(0, self.view.height - 44, self.view.width, 44)];
     self.textBar.delegate = self;
-    //[self.textBar.textView becomeFirstResponder];
+    [self.textBar.textView becomeFirstResponder];
     [self.view addSubview:self.textBar];
+    
+    self.pickedImageView = [[UIImageView alloc] init];
+    self.pickedImageView.frame = CGRectMake(60, 70, self.view.width -  120, self.view.width -  120);
+    self.pickedImageView.contentMode = UIViewContentModeScaleAspectFit;
+    //self.pickedImageView.backgroundColor = [UIColor redColor];
+    [self.view addSubview:self.pickedImageView];
     
     
     //注册一个通知监听keyBoard位置的改变
@@ -116,7 +123,6 @@
                                          andState:InputViewShowNone];
         
     }
-    
 
 }
 
@@ -161,7 +167,6 @@
                 self.emotionView.frame = CGRectMake(0.0f,CGRectGetHeight(self.view.frame)-CGRectGetHeight(rect),CGRectGetWidth(self.view.frame),CGRectGetHeight(rect));
                 
                 self.mediaView.frame = CGRectMake(0.0f,CGRectGetHeight(self.view.frame),CGRectGetWidth(self.view.frame),CGRectGetHeight(self.mediaView.frame));
-                
             }
                 
                 break;
@@ -221,10 +226,12 @@
     switch (button) {
         case DavidMediaViewPhotoButton:
             NSLog(@"DavidMediaViewPhotoButton");
+            [self openAlbum];
             break;
           
         case DavidMediaViewCameraButton:
             NSLog(@"DavidMediaViewCameraButton");
+            [self openCamera];
             break;
             
         case DavidMediaViewLocationButton:
@@ -244,6 +251,48 @@
 {
     self.textBar.emotionButton.selected = NO;
     self.textBar.addButton.selected = NO;
+}
+
+/** 打开相册 */
+-(void)openAlbum
+{
+    [self openImagePickerController:UIImagePickerControllerSourceTypeSavedPhotosAlbum];
+}
+
+-(void)openCamera
+{
+    [self openImagePickerController:UIImagePickerControllerSourceTypeCamera];
+}
+
+/** 打开相册方法 */
+-(void)openImagePickerController:(UIImagePickerControllerSourceType)sourceType
+{
+    if ([UIImagePickerController isSourceTypeAvailable:sourceType]) {
+        UIImagePickerController *imagePickerController = [[UIImagePickerController alloc] init];
+        imagePickerController.sourceType = sourceType;
+        imagePickerController.delegate = self;
+        [self presentViewController:imagePickerController animated:YES completion:nil];
+    }
+}
+
+#pragma mark - UIImagePickerControllerDelgate
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    [picker dismissViewControllerAnimated:YES completion:nil];
+    
+    // info中就包含了选择的图片
+    self.pickedImageView.image = info[UIImagePickerControllerOriginalImage];
+    
+}
+
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
+{
+    [picker dismissViewControllerAnimated:YES completion:nil];
+}
+
+-(void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (void)didReceiveMemoryWarning {
