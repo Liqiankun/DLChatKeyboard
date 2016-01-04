@@ -42,10 +42,12 @@
         
         self.pageControl = [[UIPageControl alloc] init];
         self.pageControl.userInteractionEnabled = NO;
-//        self.pageControl.pageIndicatorTintColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"pageControl_image"]];
-//        self.pageControl.currentPageIndicatorTintColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"pageControl_image_selected"]];
-        self.backgroundColor = [UIColor redColor];
-
+        
+       /* self.pageControl.pageIndicatorTintColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"pageControl_image"]];
+        self.pageControl.currentPageIndicatorTintColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"pageControl_image_selected"]];
+        self.backgroundColor = [UIColor redColor];*/
+        self.pageControl.pageIndicatorTintColor = [UIColor lightGrayColor];
+        self.pageControl.currentPageIndicatorTintColor = [UIColor orangeColor];
         [self addSubview:self.pageControl];
         
         //向scrollView添加表情页数
@@ -67,7 +69,7 @@
             
             emotionView.emotionArray = [self.emotionArray subarrayWithRange:range];
             [self.emotionScrollView addSubview:emotionView];
-            emotionView.backgroundColor = [UIColor randomColor];
+            //emotionView.backgroundColor = [UIColor randomColor];
         }
     
     }
@@ -109,15 +111,6 @@
 {
     double pageNumber = scrollView.contentOffset.x/scrollView.width;
     self.pageControl.currentPage = (int)(pageNumber + 0.5);
-}
-
-/** 随机色 */
-+(UIColor *) randomColor
-{
-    CGFloat hue = ( arc4random() % 256 / 256.0 ); //0.0 to 1.0
-    CGFloat saturation = ( arc4random() % 128 / 256.0 ) + 0.5; // 0.5 to 1.0,away from white
-    CGFloat brightness = ( arc4random() % 128 / 256.0 ) + 0.5; //0.5 to 1.0,away from black
-    return [UIColor colorWithHue:hue saturation:saturation brightness:brightness alpha:1];
 }
 
 

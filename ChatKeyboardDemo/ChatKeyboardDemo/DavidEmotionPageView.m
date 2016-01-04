@@ -49,7 +49,7 @@
     for (int i = 0 ; i < count; i++)
     {
         UIButton *button = [[UIButton alloc] init];
-        button.backgroundColor = [UIColor randomColor];
+        //button.backgroundColor = [UIColor randomColor];
         NSDictionary *emotionDic = emotionArray[i];
         NSString *emotionCode = emotionDic[@"code"];
         

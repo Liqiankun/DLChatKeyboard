@@ -38,7 +38,7 @@
     if (!_emotionView) {
         _emotionView  = [[DavidEmotionView alloc] initWithFrame:CGRectMake(0, self.view.height,[UIScreen mainScreen].bounds.size.width , 220)];
         [self.view addSubview:_emotionView];
-        _emotionView.backgroundColor = [UIColor blueColor];
+        //_emotionView.backgroundColor = [UIColor blueColor];
     }
     return _emotionView;
 }
@@ -130,6 +130,7 @@
 
 -(void)emotionDelete:(NSNotification*)notification
 {
+    //删除文字的方法
     [self.textBar.textView deleteBackward];
 }
 
