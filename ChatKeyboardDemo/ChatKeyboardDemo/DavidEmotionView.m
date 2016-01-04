@@ -9,7 +9,7 @@
 #import "DavidEmotionView.h"
 #import "UIView+Extension.h"
 #import "DavidEmotionPageView.h"
-
+#import "UIColor+randomColor.h"
 
 @interface DavidEmotionView()<UIScrollViewDelegate>
 
@@ -67,7 +67,7 @@
             
             emotionView.emotionArray = [self.emotionArray subarrayWithRange:range];
             [self.emotionScrollView addSubview:emotionView];
-            emotionView.backgroundColor = [DavidEmotionView randomColor];
+            emotionView.backgroundColor = [UIColor randomColor];
         }
     
     }

@@ -10,7 +10,7 @@
 #import "UIView+Extension.h"
 #import "NSString+Emoji.h"
 #import "DavidEmotionDetailView.h"
-
+#import "UIColor+randomColor.h"
 @interface DavidEmotionPageView ()
 
 @property(nonatomic,strong)DavidEmotionDetailView *detailView;
@@ -49,7 +49,7 @@
     for (int i = 0 ; i < count; i++)
     {
         UIButton *button = [[UIButton alloc] init];
-        button.backgroundColor = [DavidEmotionPageView randomColor];
+        button.backgroundColor = [UIColor randomColor];
         NSDictionary *emotionDic = emotionArray[i];
         NSString *emotionCode = emotionDic[@"code"];
         
@@ -121,15 +121,11 @@
     NSNotification *notification = [[NSNotification alloc] initWithName:@"DavidEmotionPageViewDeleteNotification" object:nil userInfo: nil];
     [[NSNotificationCenter defaultCenter] postNotification:notification];
     
+    //也可以写成,同上。
+    /*[[NSNotificationCenter defaultCenter] postNotificationName:@"DavidEmotionPageViewDeleteNotification" object:nil];*/
+    
 }
 
-/** 随机色 */
-+(UIColor *) randomColor
-{
-    CGFloat hue = ( arc4random() % 256 / 256.0 ); //0.0 to 1.0
-    CGFloat saturation = ( arc4random() % 128 / 256.0 ) + 0.5; // 0.5 to 1.0,away from white
-    CGFloat brightness = ( arc4random() % 128 / 256.0 ) + 0.5; //0.5 to 1.0,away from black
-    return [UIColor colorWithHue:hue saturation:saturation brightness:brightness alpha:1];
-}
+
 
 @end

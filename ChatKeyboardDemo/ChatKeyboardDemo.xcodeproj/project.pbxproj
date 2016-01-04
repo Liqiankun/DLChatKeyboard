@@ -25,6 +25,7 @@
 		6344EDED1C33E9A6006BD651 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6344EDEA1C33E9A6006BD651 /* UIView+Extension.m */; };
 		6344EDEF1C33E9D5006BD651 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6344EDEE1C33E9D5006BD651 /* ViewController.m */; };
 		6344EDF21C33EA6B006BD651 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6344EDF11C33EA6B006BD651 /* Assets.xcassets */; };
+		63A8D56A1C3A10430047143A /* UIColor+randomColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A8D5691C3A10430047143A /* UIColor+randomColor.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,8 @@
 		6344EDEE1C33E9D5006BD651 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		6344EDF01C33EA34006BD651 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		6344EDF11C33EA6B006BD651 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		63A8D5681C3A10430047143A /* UIColor+randomColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+randomColor.h"; sourceTree = "<group>"; };
+		63A8D5691C3A10430047143A /* UIColor+randomColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+randomColor.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,11 +112,10 @@
 		6312AC9A1C34EB59004ED7D0 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				63A8D56D1C3A111F0047143A /* NSString+sizeOfString */,
+				63A8D56C1C3A10FD0047143A /* UIColor+randomColor */,
+				63A8D56B1C3A10E80047143A /* NSString+Emoji */,
 				6344EDE71C33E9A6006BD651 /* UIView-Extension */,
-				6312AC951C34DF89004ED7D0 /* NSString+Emoji.h */,
-				6312AC961C34DF89004ED7D0 /* NSString+Emoji.m */,
-				6344EDE51C33E9A6006BD651 /* NSString+SIZEOFSTRING.h */,
-				6344EDE61C33E9A6006BD651 /* NSString+SIZEOFSTRING.m */,
 			);
 			name = Category;
 			sourceTree = "<group>";
@@ -250,6 +252,33 @@
 			path = "UIView-Extension";
 			sourceTree = "<group>";
 		};
+		63A8D56B1C3A10E80047143A /* NSString+Emoji */ = {
+			isa = PBXGroup;
+			children = (
+				6312AC951C34DF89004ED7D0 /* NSString+Emoji.h */,
+				6312AC961C34DF89004ED7D0 /* NSString+Emoji.m */,
+			);
+			name = "NSString+Emoji";
+			sourceTree = "<group>";
+		};
+		63A8D56C1C3A10FD0047143A /* UIColor+randomColor */ = {
+			isa = PBXGroup;
+			children = (
+				63A8D5681C3A10430047143A /* UIColor+randomColor.h */,
+				63A8D5691C3A10430047143A /* UIColor+randomColor.m */,
+			);
+			name = "UIColor+randomColor";
+			sourceTree = "<group>";
+		};
+		63A8D56D1C3A111F0047143A /* NSString+sizeOfString */ = {
+			isa = PBXGroup;
+			children = (
+				6344EDE51C33E9A6006BD651 /* NSString+SIZEOFSTRING.h */,
+				6344EDE61C33E9A6006BD651 /* NSString+SIZEOFSTRING.m */,
+			);
+			name = "NSString+sizeOfString";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -384,6 +413,7 @@
 				6344EDEF1C33E9D5006BD651 /* ViewController.m in Sources */,
 				6344EDED1C33E9A6006BD651 /* UIView+Extension.m in Sources */,
 				6312AC941C34D86A004ED7D0 /* DavidEmotionPageView.m in Sources */,
+				63A8D56A1C3A10430047143A /* UIColor+randomColor.m in Sources */,
 				6312AC971C34DF89004ED7D0 /* NSString+Emoji.m in Sources */,
 				6344EDE41C33E98A006BD651 /* DavidTextBar.m in Sources */,
 				6344EDE31C33E98A006BD651 /* DavidMediaView.m in Sources */,
