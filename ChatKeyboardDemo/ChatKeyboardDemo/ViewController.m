@@ -62,7 +62,9 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyBoardWillHide:) name:UIKeyboardWillHideNotification object:nil];
     //表情页面点击表情的通知
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(emotionPageDidSelect:) name:@"DavidEmotionPageViewDidSelectNotification" object:nil];
-
+    //表情页面的删除通知
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(emotionDelete:) name:@"DavidEmotionPageViewDeleteNotification" object:nil];
+    
 }
 
 -(void)textBar:(DavidTextBar *)textBar andButtonType:(DavidTextBarButtonType)buttonType andSelected:(BOOL)selected
@@ -124,6 +126,11 @@
     //self.textBar.textView.text = [NSString stringWithFormat:@"%@%@",self.textBar.textView.text,str];
     //插入表情
     [self.textBar.textView insertText:str];
+}
+
+-(void)emotionDelete:(NSNotification*)notification
+{
+    [self.textBar.textView deleteBackward];
 }
 
 - (void)messageViewAnimationWithMessageRect:(CGRect)rect  withMessageInputViewRect:(CGRect)inputViewRect andDuration:(double)duration andState:(InputViewStateType)state{

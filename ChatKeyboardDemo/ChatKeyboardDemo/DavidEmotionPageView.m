@@ -14,6 +14,7 @@
 @interface DavidEmotionPageView ()
 
 @property(nonatomic,strong)DavidEmotionDetailView *detailView;
+@property(nonatomic,strong) UIButton *deleteButton;
 
 @end
 
@@ -25,6 +26,20 @@
         self.detailView = [DavidEmotionDetailView detailView];
     }
     return _detailView;
+}
+
+-(instancetype)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    if (self) {
+        self.deleteButton = [[UIButton alloc] init];
+        [self.deleteButton setImage:[UIImage imageNamed:@"compose_emotion_delete_highlighted"] forState:UIControlStateHighlighted];
+        [self.deleteButton setImage:[UIImage imageNamed:@"compose_emotion_delete"] forState:UIControlStateNormal];
+        [self.deleteButton  addTarget:self action:@selector(deleteButtonAction:) forControlEvents:UIControlEventTouchUpInside];
+        
+        
+    }
+    return self;
 }
 
 -(void)setEmotionArray:(NSArray *)emotionArray
@@ -56,7 +71,7 @@
     
     CGFloat inset = 10;//内边距
     CGFloat btnWidth = (self.width - 2 * inset) / 7;
-    CGFloat btnHeight = (self.height - inset) / 3;
+    CGFloat btnHeight = (self.height - 2 * inset) / 3;
     
     for (int i = 0 ; i < count; i++)
     {
@@ -67,6 +82,12 @@
         button.y = inset + (i/7) * btnHeight;
         
     }
+    
+    self.deleteButton.width  = btnWidth;
+    self.deleteButton.height = btnHeight;
+    self.deleteButton.y = self.height - btnHeight - inset;
+    self.deleteButton.x = self.width - inset - btnWidth;
+    [self addSubview:self.deleteButton];
 }
 
 /** 按钮点击事件 */
@@ -90,6 +111,14 @@
     NSMutableDictionary *userInfo = [[NSMutableDictionary alloc] init];
     userInfo[@"selectedEmotion"] = button.titleLabel.text;
     NSNotification *notification =  [[NSNotification alloc] initWithName:@"DavidEmotionPageViewDidSelectNotification" object:nil userInfo:userInfo];
+    [[NSNotificationCenter defaultCenter] postNotification:notification];
+    
+}
+
+-(void)deleteButtonAction:(UIButton*)button
+{
+    //删除按钮的通知
+    NSNotification *notification = [[NSNotification alloc] initWithName:@"DavidEmotionPageViewDeleteNotification" object:nil userInfo: nil];
     [[NSNotificationCenter defaultCenter] postNotification:notification];
     
 }
