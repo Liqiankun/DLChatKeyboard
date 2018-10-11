@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "6344EDA41C33E93A006BD651"
-               BuildableName = "ChatKeyboardDemo.app"
-               BlueprintName = "ChatKeyboardDemo"
-               ReferencedContainer = "container:ChatKeyboardDemo.xcodeproj">
+               BuildableName = "DLChatKeyboardDemo.app"
+               BlueprintName = "DLChatKeyboardDemo"
+               ReferencedContainer = "container:DLChatKeyboardDemo.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "6344EDBD1C33E93B006BD651"
-               BuildableName = "ChatKeyboardDemoTests.xctest"
-               BlueprintName = "ChatKeyboardDemoTests"
-               ReferencedContainer = "container:ChatKeyboardDemo.xcodeproj">
+               BuildableName = "DLChatKeyboardDemoTests.xctest"
+               BlueprintName = "DLChatKeyboardDemoTests"
+               ReferencedContainer = "container:DLChatKeyboardDemo.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "6344EDC81C33E93B006BD651"
-               BuildableName = "ChatKeyboardDemoUITests.xctest"
-               BlueprintName = "ChatKeyboardDemoUITests"
-               ReferencedContainer = "container:ChatKeyboardDemo.xcodeproj">
+               BuildableName = "DLChatKeyboardDemoUITests.xctest"
+               BlueprintName = "DLChatKeyboardDemoUITests"
+               ReferencedContainer = "container:DLChatKeyboardDemo.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -53,9 +53,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6344EDA41C33E93A006BD651"
-            BuildableName = "ChatKeyboardDemo.app"
-            BlueprintName = "ChatKeyboardDemo"
-            ReferencedContainer = "container:ChatKeyboardDemo.xcodeproj">
+            BuildableName = "DLChatKeyboardDemo.app"
+            BlueprintName = "DLChatKeyboardDemo"
+            ReferencedContainer = "container:DLChatKeyboardDemo.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6344EDA41C33E93A006BD651"
-            BuildableName = "ChatKeyboardDemo.app"
-            BlueprintName = "ChatKeyboardDemo"
-            ReferencedContainer = "container:ChatKeyboardDemo.xcodeproj">
+            BuildableName = "DLChatKeyboardDemo.app"
+            BlueprintName = "DLChatKeyboardDemo"
+            ReferencedContainer = "container:DLChatKeyboardDemo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -95,9 +95,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6344EDA41C33E93A006BD651"
-            BuildableName = "ChatKeyboardDemo.app"
-            BlueprintName = "ChatKeyboardDemo"
-            ReferencedContainer = "container:ChatKeyboardDemo.xcodeproj">
+            BuildableName = "DLChatKeyboardDemo.app"
+            BlueprintName = "DLChatKeyboardDemo"
+            ReferencedContainer = "container:DLChatKeyboardDemo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

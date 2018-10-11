@@ -11,6 +11,12 @@
 #import "DavidMediaView.h"
 #import "DavidEmotionView.h"
 #import "UIView+Extension.h"
+
+#define DL_SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
+#define DL_SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
+
+#define SafeAreaBottomHeight (DL_SCREEN_WIDTH / DL_SCREEN_HEIGHT < 0.5 ? 34 : 0)
+
 @interface ViewController ()<DavidTextBarDelegate,DavidMediaViewDelegate,UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 
 @property(nonatomic,strong)DavidTextBar *textBar;
@@ -20,6 +26,7 @@
 @property(nonatomic,assign) CGRect keyBoardRect;
 @property(nonatomic,assign) double duration;
 @property(nonatomic,strong) UIImageView *pickedImageView;
+
 @end
 
 @implementation ViewController
@@ -51,9 +58,8 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
     self.automaticallyAdjustsScrollViewInsets = NO;
-    self.textBar = [[DavidTextBar alloc] initWithFrame:CGRectMake(0, self.view.height - 44, self.view.width, 44)];
+    self.textBar = [[DavidTextBar alloc] initWithFrame:CGRectMake(0, self.view.height - 44 - SafeAreaBottomHeight, self.view.width, 44)];
     self.textBar.delegate = self;
-    [self.textBar.textView becomeFirstResponder];
     [self.view addSubview:self.textBar];
     
     self.pickedImageView = [[UIImageView alloc] init];
@@ -71,6 +77,8 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(emotionPageDidSelect:) name:@"DavidEmotionPageViewDidSelectNotification" object:nil];
     //表情页面的删除通知
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(emotionDelete:) name:@"DavidEmotionPageViewDeleteNotification" object:nil];
+    
+
     
 }
 
@@ -143,7 +151,12 @@
 - (void)messageViewAnimationWithMessageRect:(CGRect)rect  withMessageInputViewRect:(CGRect)inputViewRect andDuration:(double)duration andState:(InputViewStateType)state{
     
     [UIView animateWithDuration:duration animations:^{
-        self.textBar.frame = CGRectMake(0.0f,CGRectGetHeight(self.view.frame)-CGRectGetHeight(rect)-CGRectGetHeight(inputViewRect),CGRectGetWidth(self.view.frame),CGRectGetHeight(inputViewRect));
+        
+        if (state == InputViewShowNone) {
+            self.textBar.frame = CGRectMake(0.0f,CGRectGetHeight(self.view.frame)-CGRectGetHeight(rect) -CGRectGetHeight(inputViewRect), CGRectGetWidth(self.view.frame),CGRectGetHeight(inputViewRect));
+        } else {
+            self.textBar.frame = CGRectMake(0.0f,CGRectGetHeight(self.view.frame)-CGRectGetHeight(rect) -CGRectGetHeight(inputViewRect) - SafeAreaBottomHeight, CGRectGetWidth(self.view.frame),CGRectGetHeight(inputViewRect));
+        }
         
         switch (state) {
             case InputViewShowNone:{
@@ -155,7 +168,7 @@
                 break;
                 
             case InputViewShowAdd:{
-                self.mediaView.frame = CGRectMake(0.0f,CGRectGetHeight(self.view.frame)-CGRectGetHeight(rect),CGRectGetWidth(self.view.frame),CGRectGetHeight(rect));
+                self.mediaView.frame = CGRectMake(0.0f,CGRectGetHeight(self.view.frame)-CGRectGetHeight(rect) - SafeAreaBottomHeight ,CGRectGetWidth(self.view.frame),CGRectGetHeight(rect));
                 
                 self.emotionView.frame = CGRectMake(0.0f,CGRectGetHeight(self.view.frame),CGRectGetWidth(self.view.frame),CGRectGetHeight(self.emotionView.frame));
             }
@@ -164,7 +177,7 @@
                 
             case InputViewShowEmotion:{
                 
-                self.emotionView.frame = CGRectMake(0.0f,CGRectGetHeight(self.view.frame)-CGRectGetHeight(rect),CGRectGetWidth(self.view.frame),CGRectGetHeight(rect));
+                self.emotionView.frame = CGRectMake(0.0f,CGRectGetHeight(self.view.frame)-CGRectGetHeight(rect) - SafeAreaBottomHeight,CGRectGetWidth(self.view.frame),CGRectGetHeight(rect));
                 
                 self.mediaView.frame = CGRectMake(0.0f,CGRectGetHeight(self.view.frame),CGRectGetWidth(self.view.frame),CGRectGetHeight(self.mediaView.frame));
             }
@@ -218,7 +231,7 @@
     [self.view endEditing:YES];
     self.textBar.emotionButton.selected = NO;
     self.textBar.addButton.selected = NO;
-    [self messageViewAnimationWithMessageRect:CGRectMake(0, 0, 0, 0) withMessageInputViewRect:self.textBar.frame andDuration:0.25 andState:InputViewShowNone];
+    [self messageViewAnimationWithMessageRect:CGRectMake(0, 0, 0, SafeAreaBottomHeight) withMessageInputViewRect:CGRectMake(0, 0, 0, 44) andDuration:0.25 andState:InputViewShowNone];
 }
 
 -(void)mediaView:(DavidMediaView *)mediaView didClickAtButton:(DavidMediaViewButtonType)button

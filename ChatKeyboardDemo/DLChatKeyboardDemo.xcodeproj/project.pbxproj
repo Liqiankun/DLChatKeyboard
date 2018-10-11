@@ -54,16 +54,16 @@
 		6312ACA01C350223004ED7D0 /* DavidEmotionDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DavidEmotionDetailView.h; sourceTree = "<group>"; };
 		6312ACA11C350223004ED7D0 /* DavidEmotionDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DavidEmotionDetailView.m; sourceTree = "<group>"; };
 		6312ACA31C350256004ED7D0 /* DavidEmotionDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DavidEmotionDetailView.xib; sourceTree = "<group>"; };
-		6344EDA51C33E93A006BD651 /* ChatKeyboardDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatKeyboardDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6344EDA51C33E93A006BD651 /* DLChatKeyboardDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DLChatKeyboardDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6344EDA91C33E93A006BD651 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6344EDAB1C33E93B006BD651 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6344EDAC1C33E93B006BD651 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		6344EDB71C33E93B006BD651 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6344EDB91C33E93B006BD651 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6344EDBE1C33E93B006BD651 /* ChatKeyboardDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChatKeyboardDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6344EDBE1C33E93B006BD651 /* DLChatKeyboardDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DLChatKeyboardDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6344EDC21C33E93B006BD651 /* ChatKeyboardDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatKeyboardDemoTests.m; sourceTree = "<group>"; };
 		6344EDC41C33E93B006BD651 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6344EDC91C33E93B006BD651 /* ChatKeyboardDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChatKeyboardDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6344EDC91C33E93B006BD651 /* DLChatKeyboardDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DLChatKeyboardDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6344EDCD1C33E93B006BD651 /* ChatKeyboardDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatKeyboardDemoUITests.m; sourceTree = "<group>"; };
 		6344EDCF1C33E93B006BD651 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6344EDDC1C33E98A006BD651 /* DavidEmotionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DavidEmotionView.h; sourceTree = "<group>"; };
@@ -178,9 +178,9 @@
 		6344EDA61C33E93A006BD651 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6344EDA51C33E93A006BD651 /* ChatKeyboardDemo.app */,
-				6344EDBE1C33E93B006BD651 /* ChatKeyboardDemoTests.xctest */,
-				6344EDC91C33E93B006BD651 /* ChatKeyboardDemoUITests.xctest */,
+				6344EDA51C33E93A006BD651 /* DLChatKeyboardDemo.app */,
+				6344EDBE1C33E93B006BD651 /* DLChatKeyboardDemoTests.xctest */,
+				6344EDC91C33E93B006BD651 /* DLChatKeyboardDemoUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -282,9 +282,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		6344EDA41C33E93A006BD651 /* ChatKeyboardDemo */ = {
+		6344EDA41C33E93A006BD651 /* DLChatKeyboardDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6344EDD21C33E93B006BD651 /* Build configuration list for PBXNativeTarget "ChatKeyboardDemo" */;
+			buildConfigurationList = 6344EDD21C33E93B006BD651 /* Build configuration list for PBXNativeTarget "DLChatKeyboardDemo" */;
 			buildPhases = (
 				6344EDA11C33E93A006BD651 /* Sources */,
 				6344EDA21C33E93A006BD651 /* Frameworks */,
@@ -294,14 +294,14 @@
 			);
 			dependencies = (
 			);
-			name = ChatKeyboardDemo;
+			name = DLChatKeyboardDemo;
 			productName = ChatKeyboardDemo;
-			productReference = 6344EDA51C33E93A006BD651 /* ChatKeyboardDemo.app */;
+			productReference = 6344EDA51C33E93A006BD651 /* DLChatKeyboardDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
-		6344EDBD1C33E93B006BD651 /* ChatKeyboardDemoTests */ = {
+		6344EDBD1C33E93B006BD651 /* DLChatKeyboardDemoTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6344EDD51C33E93B006BD651 /* Build configuration list for PBXNativeTarget "ChatKeyboardDemoTests" */;
+			buildConfigurationList = 6344EDD51C33E93B006BD651 /* Build configuration list for PBXNativeTarget "DLChatKeyboardDemoTests" */;
 			buildPhases = (
 				6344EDBA1C33E93B006BD651 /* Sources */,
 				6344EDBB1C33E93B006BD651 /* Frameworks */,
@@ -312,14 +312,14 @@
 			dependencies = (
 				6344EDC01C33E93B006BD651 /* PBXTargetDependency */,
 			);
-			name = ChatKeyboardDemoTests;
+			name = DLChatKeyboardDemoTests;
 			productName = ChatKeyboardDemoTests;
-			productReference = 6344EDBE1C33E93B006BD651 /* ChatKeyboardDemoTests.xctest */;
+			productReference = 6344EDBE1C33E93B006BD651 /* DLChatKeyboardDemoTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		6344EDC81C33E93B006BD651 /* ChatKeyboardDemoUITests */ = {
+		6344EDC81C33E93B006BD651 /* DLChatKeyboardDemoUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6344EDD81C33E93B006BD651 /* Build configuration list for PBXNativeTarget "ChatKeyboardDemoUITests" */;
+			buildConfigurationList = 6344EDD81C33E93B006BD651 /* Build configuration list for PBXNativeTarget "DLChatKeyboardDemoUITests" */;
 			buildPhases = (
 				6344EDC51C33E93B006BD651 /* Sources */,
 				6344EDC61C33E93B006BD651 /* Frameworks */,
@@ -330,9 +330,9 @@
 			dependencies = (
 				6344EDCB1C33E93B006BD651 /* PBXTargetDependency */,
 			);
-			name = ChatKeyboardDemoUITests;
+			name = DLChatKeyboardDemoUITests;
 			productName = ChatKeyboardDemoUITests;
-			productReference = 6344EDC91C33E93B006BD651 /* ChatKeyboardDemoUITests.xctest */;
+			productReference = 6344EDC91C33E93B006BD651 /* DLChatKeyboardDemoUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -357,7 +357,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 6344EDA01C33E93A006BD651 /* Build configuration list for PBXProject "ChatKeyboardDemo" */;
+			buildConfigurationList = 6344EDA01C33E93A006BD651 /* Build configuration list for PBXProject "DLChatKeyboardDemo" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -370,9 +370,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6344EDA41C33E93A006BD651 /* ChatKeyboardDemo */,
-				6344EDBD1C33E93B006BD651 /* ChatKeyboardDemoTests */,
-				6344EDC81C33E93B006BD651 /* ChatKeyboardDemoUITests */,
+				6344EDA41C33E93A006BD651 /* DLChatKeyboardDemo */,
+				6344EDBD1C33E93B006BD651 /* DLChatKeyboardDemoTests */,
+				6344EDC81C33E93B006BD651 /* DLChatKeyboardDemoUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -447,12 +447,12 @@
 /* Begin PBXTargetDependency section */
 		6344EDC01C33E93B006BD651 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 6344EDA41C33E93A006BD651 /* ChatKeyboardDemo */;
+			target = 6344EDA41C33E93A006BD651 /* DLChatKeyboardDemo */;
 			targetProxy = 6344EDBF1C33E93B006BD651 /* PBXContainerItemProxy */;
 		};
 		6344EDCB1C33E93B006BD651 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 6344EDA41C33E93A006BD651 /* ChatKeyboardDemo */;
+			target = 6344EDA41C33E93A006BD651 /* DLChatKeyboardDemo */;
 			targetProxy = 6344EDCA1C33E93B006BD651 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -579,7 +579,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = david.com.cn.ChatKeyboardDemoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChatKeyboardDemo.app/ChatKeyboardDemo";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DLChatKeyboardDemo.app/DLChatKeyboardDemo";
 			};
 			name = Debug;
 		};
@@ -591,7 +591,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = david.com.cn.ChatKeyboardDemoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChatKeyboardDemo.app/ChatKeyboardDemo";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DLChatKeyboardDemo.app/DLChatKeyboardDemo";
 			};
 			name = Release;
 		};
@@ -622,7 +622,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		6344EDA01C33E93A006BD651 /* Build configuration list for PBXProject "ChatKeyboardDemo" */ = {
+		6344EDA01C33E93A006BD651 /* Build configuration list for PBXProject "DLChatKeyboardDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6344EDD01C33E93B006BD651 /* Debug */,
@@ -631,7 +631,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6344EDD21C33E93B006BD651 /* Build configuration list for PBXNativeTarget "ChatKeyboardDemo" */ = {
+		6344EDD21C33E93B006BD651 /* Build configuration list for PBXNativeTarget "DLChatKeyboardDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6344EDD31C33E93B006BD651 /* Debug */,
@@ -640,7 +640,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6344EDD51C33E93B006BD651 /* Build configuration list for PBXNativeTarget "ChatKeyboardDemoTests" */ = {
+		6344EDD51C33E93B006BD651 /* Build configuration list for PBXNativeTarget "DLChatKeyboardDemoTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6344EDD61C33E93B006BD651 /* Debug */,
@@ -649,7 +649,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6344EDD81C33E93B006BD651 /* Build configuration list for PBXNativeTarget "ChatKeyboardDemoUITests" */ = {
+		6344EDD81C33E93B006BD651 /* Build configuration list for PBXNativeTarget "DLChatKeyboardDemoUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6344EDD91C33E93B006BD651 /* Debug */,
